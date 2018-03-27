@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Load Babel 6 from cdnjs - babel-standalone -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script> -->
+
+        <!-- Load babel 6 - babel-core, output error -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js"></script> -->
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+            var nameBuilder = function(firstName = "Dandy", lastName = "Xu") {
+                console.log(firstName + " " + lastName);
+            };
+
+            nameBuilder();
+        </script>
+        <title>Working with Babel</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <p>Tried to import Babel 6 (babel-core) in cdnjs, previous source link: https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js, <br />
+        but console output error: <br />
+        <code>
+            Uncaught TypeError: Cannot read property 'keys' of undefined
+        </code><br />
+        
+        </p>
+
+        <p>
+            Check on StackOverflow, tried to use <code>babel-standalone</code> or <code>Babel 5</code> instead, working normally.
+        </p>
+
+
+    </body>
+</html>
