@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+
+            // Using factory method
+            const id = Symbol();
+            const courseInfo = {
+                title: "ES6",
+                topics: ["babel", "syntax", "functions", "classes"],
+                id: "js-course"
+            };
+            
+            // If we define "id" as Symbol, it has unique id and won't be overrided.
+            courseInfo[id] = 19910819;
+
+            console.log(courseInfo);
+          
+        </script>
+
+        <title>Symbols</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Symbols</h2>
+
+        JavaScript Primitives are types, like numbers, strings, arrays and objects.
+
+        <ul>
+            <li>Symbols is a new type of primitive</li>
+            <li>Often used as unique IDs</li>
+            <li>Define customized iteration behavior</li>
+        </ul>
+
+    </body>
+</html>
