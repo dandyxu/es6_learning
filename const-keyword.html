@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+            const birthYear = 1992;
+            // If reassign value to const birthYear, it will output error
+            // Line 3: Duplicate declaration "birthYear"
+            // var birthYear = 1993;
+
+            var age = 2018 - 1992;
+
+            console.log(age);
+
+            function coldEnough(deg) {
+                const freezingTemp = 32;
+                if ( freezingTemp <= deg) {
+                    return deg + " is above freezing.";
+                }else {
+                    return deg + " is below freezing.";
+                }
+            }
+
+            console.log(coldEnough(45));
+            console.log(coldEnough(15));
+            console.log(coldEnough(-20));
+
+
+
+        </script>
+        <title>Const Keyword</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Const Keyword</h2>
+
+    </body>
+</html>
