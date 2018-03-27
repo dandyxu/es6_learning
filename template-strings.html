@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+            // Old fashion way using string
+            // function print(firstName) {
+            //     console.log("Hello, " + firstName);
+            // }
+
+            // print("Dandy");
+
+            // ES6 template strings, wrap into backticks
+            function print(firstName) {
+                console.log(`Hello, ${firstName}`);
+            }
+
+            print("Dandy");
+
+            function createEmail(firstName, purchasePrice) {
+                var shipping = 5.95;
+                console.log(
+                    `Hi ${firstName}, Thanks for buying from us!
+                        Total: $${purchasePrice}
+                        Shipping: $${shipping}
+                        Grand Total: $${purchasePrice + shipping}
+                    `
+                );
+            }
+            
+            createEmail("Dandy", 500);
+            
+
+        </script>
+        <title>Template Strings</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Template Strings</h2>
+
+        <p>Template Strings is to allow you to tap into the functionalities of template languages to format your JavaScript code with variables.</p>
+
+    </body>
+</html>
