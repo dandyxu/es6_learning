@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+            // Old fashion
+            var cat = {
+                meow: function(times) {
+                    console.log(Array(times + 1).join("meow"));
+                },
+                purr: function(times) {
+                    console.log(Array(times + 1).join("purr"));
+                },
+                snore: function(times) {
+                    console.log(Array(times + 1).join("snore"));
+                }
+            };
+
+            cat.meow(3);
+            cat.purr(5);
+            cat.snore(7);
+
+            // Enhancement in ES6
+            var cat = {
+                meow(times) {
+                    console.log("meow".repeat(times));
+                },
+                purr(times) {
+                    console.log("purr".repeat(times));
+                },
+                snore(times) {
+                    console.log("snore".repeat(times));
+                }
+            } 
+
+            cat.meow(3);
+            cat.purr(5);
+            cat.snore(7);
+
+
+        </script>
+
+        <title>Object Literal Enhancement </title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Object Literal Enhancement</h2>
+
+        <ul>
+            <li>.repeat() in ES6</li>
+        </ul>
+
+    </body>
+</html>
