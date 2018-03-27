@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script>
+            class Vehicle {
+
+                // Constructor function
+                constructor(description, wheels) {
+                    // properties for the Vehicle
+                    this.description = description;
+                    this.wheels = wheels;
+                }
+
+                // DescribeYouself method inside of class Vehicle
+                describeYourself () {
+                    console.log(`I am ${this.description} with ${this.wheels} wheels.`);
+                }
+            }
+            
+            // Create a new instance of Vehicle class
+            var suv = new Vehicle("Audi Q5", 4);
+
+            suv.describeYourself();
+          
+        </script>
+
+        <title>Classes</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Classes</h2>
+
+    </body>
+</html>
