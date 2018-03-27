@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+
+            var [first,,,,last] = ["Limerick", "Cork", "Galway", "Dublin", "Nanjing"];
+            
+            console.log(first, last);           
+
+            // Object - key, value
+            var {title, price} = {
+                title: "Tuna",
+                price: 5,
+                description: "Subway best sandwich",
+                ingredients: ['bread', 'tuna', 'fish', 'cheese', 'salad']
+            };
+
+            console.log(title);
+            console.log(price);
+
+            // Pass an object "vacation" to a function vacationTrip(), function parses the object and we can access to values by variables
+            var vacation = {
+                destination: "New York",
+                travelers: 2,
+                acticity: "Meseum",
+                cost: 1000
+            };
+
+            function vacationTrip( {destination, acticity} ) {
+                return `Come to ${destination} and do some ${acticity}`;
+            }
+
+            console.log(vacationTrip(vacation));
+
+        </script>
+
+        <title>Destructuring Assignment</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Destructuring Assignment</h2>
+
+        <ul>
+            <li>Using comma to hold index position</li>
+            <li>Using object variable(key) to access values</li>
+            <li>Passing object to a function and functin will parse it, then we can access to values by object keys</li>
+        </ul>
+
+
+    </body>
+</html>
