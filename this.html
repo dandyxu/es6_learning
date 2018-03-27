@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+
+            var person = {
+                first: "Dandy",
+                actions: ['bike', 'hike', 'ski', 'walk'],
+                printActions() {
+                    // var _this = this;
+                    this.actions.forEach(action => {
+
+                        var str = this.first + " likes to " + action;
+                        console.log(str);
+                    }.bind(this));
+                }
+            };
+            person.printActions();
+        
+        </script>
+
+        <title>Arrow Functions and "this" scope</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Arrow Functions and "this" scope</h2>
+
+        <h3>Error: </h3>
+        
+        <p>If we use <code>this.first</code> in line 16, it will output error: <code>Uncaught TypeError: Cannot read property 'first' of undefined</code></p>
+        
+        <h3>Solutions: </h3>
+        <ul>
+            <li>Declare a new variable _this outside of forEach scope, pass this to _this.</li>
+            <li>Alternatively, using .bind(this) property in the end of forEach function </li>
+        </ul>
+
+        Old fashion way:
+        <code>
+            printActions : function() {
+                this.actions.forEach(function(action) {
+
+                    var str = this.first + " likes to " + action;
+                    console.log(str);
+                    
+                }.bind(this));
+            }
+        </code>
+
+    </body>
+</html>
