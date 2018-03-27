@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script>
+           var attendances = {
+               _list : [],
+            //    
+               set addName(name) {
+                   this._list.push(name);
+               },
+            //    
+               get list() {
+                   return this._list.join(', ');
+               }
+           };
+
+           attendances.addName = 'Dandy';
+
+           console.log("List getter: " + attendances.list);
+           console.log("_list (prop): " + attendances._list);
+
+           attendances.addName = 'Jefferson';
+           attendances.addName = 'Wenqian';
+           attendances.addName = 'Xu';
+           console.log(attendances.list);
+
+           console.log("================= I am divider: classes below =============");
+
+           class Hike {
+
+               constructor(distance, pace) {
+                //    class properties
+                   this.distance = distance;
+                   this.pace = pace;
+               }
+
+            //    calLength method
+               calcLength () {
+                   return  this.distance / this.pace;
+               }
+               
+            //    get method using result of calcLength method
+               get lengthInHours() {
+                    return `${this.calcLength()} hours.`;
+               }
+           }
+
+           var RingofKerry = new Hike(20, 5);
+
+           console.log(RingofKerry.lengthInHours);
+          
+        </script>
+
+        <title>Getters and Setters</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Getters and Setters</h2>
+
+        <p>Keyword: <strong>set </strong> and <strong>get</strong>.</p>
+
+    </body>
+</html>
