@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+           
+           // Constructor function
+           var course = new Map();
+           course.set('react', {description: 'ui'});
+           course.set('rest', {description: 'testing'});
+
+           console.log(course);
+            
+            // We can't use dot notation to return values, will outout "undefined"
+           console.log(course.react);
+
+           console.log(course.get('react'));
+
+           var details = new Map([
+                [new Date(), 'today'],
+                ['item', [1, 2]]
+
+           ]);
+
+           console.log(details.size);
+            
+            // Old way
+           details.forEach(function(item) {
+               console.log("Old way is " + item);
+           });
+
+            // New way using arrow point    
+           details.forEach(item => {
+               console.log("New way is " + item);
+           });
+
+
+        </script>
+        <title>Maps</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Map</h2>
+
+        <ul>
+            <li>Holds key value pairs</li>
+            <li>Any type can be used as a key</li>
+        </ul>
+
+        <h2>Why use a map?</h2>
+
+        <ul>
+            <li>Use something other than a string as a key (a function as a key, an array can be a key, a number can be a key)</li>
+            <li>Utilize key value pairs that are always the same values</li>
+            <li>Need to iterate in order</li>
+        </ul>
+
+    </body>
+</html>
