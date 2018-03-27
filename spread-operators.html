@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+            var cats = ["cat 1", "cat 2", "cat 3"];
+            var dogs = ["dog a", "dog b", "dog c"];
+            
+            // If use variable name directly into the array, variables will be treated as subarray.
+            // Must use Spread operator ...
+            var animals = ["Whale", "Giraffe", ...cats, "Snake", ...dogs, "Coyote"];
+
+            console.log(animals);
+
+        </script>
+        <title>Spread operators</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Spread operators - <code>...</code></h2>
+
+        <p>The spread operators can turn the elements of an array into arguments of a functon call, or into elements of an array literal.</p>
+
+    </body>
+</html>
