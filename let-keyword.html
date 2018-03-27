@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Style -->
+        <style type="text/css">
+            section > div {
+                height: 100px;
+                width: 100px;
+                background-color: red;
+                float: left;
+                margin: 3px;
+                cursor: pointer;
+            }
+        </style>
+
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+           var x = 10;
+
+           if (x) {
+               var x = 4;
+           }
+
+           console.log("using var keyword x is " + x); 
+
+            var y = 10;
+
+            if (y) {
+                let y = 4;
+                console.log("if console out inside of block, y should be " + y);
+            }
+
+            console.log("using let keyword y is " + y); 
+            
+            /**
+                If using var keyword for i, index of recorded is always 45. 
+                Easiest way to deal with the problem is using let keyword.
+             */
+            for ( let i = 0; i< 45; i++) {
+                var div = document.createElement('div');
+                div.onclick = function(){
+                    alert("You click on a box #" + i);
+                };
+                document.getElementsByTagName('section')[0].appendChild(div);
+            }
+
+        </script>
+        <title>Let Keyword</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Difference between var and let</h2>
+        let is new element in the ES6 and very useful tool for enforcing block scoping in javascript code.
+
+        <hr />
+        <header>
+            <h1>Click on a box</h1>
+        </header>
+        <section>
+
+        </section>
+
+    </body>
+</html>
