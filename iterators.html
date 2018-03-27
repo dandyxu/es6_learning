@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+
+            var title = "ES6";
+            console.log(typeof title[Symbol.iterator]);
+
+            var iterateIt = title[Symbol.iterator]();
+
+            console.log(iterateIt.next());
+            console.log(iterateIt.next());
+            console.log(iterateIt.next());
+            console.log(iterateIt.next());
+
+            // Define custom iterator
+            function tableReady(arr) {
+                var nextIndex = 0;
+                return {
+                    next() {
+                        if (nextIndex < arr.length) {
+                            return {value: arr.shift(), done: false}
+                        }else {
+                            return {done: true}
+                        }
+                    }
+                }
+            }
+
+            var waitingList = ['Dandy', 'Jefferson', 'Wenqian', 'Xu'];
+
+            var iterateList = tableReady(waitingList);
+
+            console.log(`${iterateList.next().value}, your table is ready.`);
+            console.log(`${iterateList.next().value}, your table is ready.`);
+            console.log(`${iterateList.next().value}, your table is ready.`);
+            console.log(`${iterateList.next().value}, your table is ready.`);
+            console.log(`Is your table is ready? ${iterateList.next().done}`);
+
+        </script>
+
+        <title>Iterators</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Iterators</h2>
+
+        <ul>
+            <li>Processing items in a collection</li>
+            <li>Using for loops, while loops, and map()</li>
+            <li><strong>New:</strong> Custom iteration behaviour in ES6</li>
+        </ul>
+
+        <h2>New Protocols</h2>
+
+        <ul>
+            <li><strong>Iterable</strong> - JS objects define their own iteration behaviour.</li>
+            <li><strong>Iterator</strong> - a standard way to produce a sequence of values.</li>
+        </ul>
+
+        <ul>
+            <li>Symbol.iterator is a method that returns the default iterator for an object or a factory of iterators.</li>
+        </ul>
+
+    </body>
+</html>
