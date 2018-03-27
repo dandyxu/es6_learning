@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script> -->
+
+        <script>
+            
+            const delay = seconds => {
+                return new Promise(
+                    resolve => setTimeout(resolve, seconds * 1000)
+                )
+            };
+
+            const countToFive = async() => {
+                console.log('zero seconds');
+                await delay(1);
+                console.log('1 second');
+                await delay(2);
+                console.log('2 second');
+                await delay(5);
+                console.log('5 second');
+            };
+
+            countToFive();
+        
+          
+        </script>
+
+        <title>Async</title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Async</h2>
+
+        <ul>
+            <li>async()</li>
+            <li>await</li>
+        </ul>
+
+        <h3>Error: </h3>
+        <code>regeneratorRuntime is not defined</code>
+
+        <h3>Solution: </h3>
+        <p>Remove babel script because babel version is not working with async function.</p>
+
+        <h3>If we remove async and await, it just output all texts</h3>
+
+        <h3>Benefits of Async function: </h3>
+
+        <ul>
+            <li>Write some cleaner more readable code and take advantage of async behaviour</li>
+            <li>We have error handling and easier to debug</li>
+        </ul>
+
+    </body>
+</html>
