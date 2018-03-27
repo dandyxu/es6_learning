@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Load babel 5 - babel-core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+        <script type="text/babel">
+            // Default Parameters Value 
+            function add(x = 5, y = 6) {
+                console.log(x+y);
+            }
+            add();
+
+            function haveFun(activityName = "walking", time = 2) {
+                console.log(`Today I will go ${activityName} for ${time} hours. `);
+            }
+            // If there is new value passed in parameters, it will override the default value
+            haveFun("hiking", 5);
+
+
+        </script>
+
+        <title>Default Function Parameters </title>
+
+    </head>
+
+    <body>
+
+        <h1>Hit the pit</h1>
+
+        <h2>Default Function Parameters</h2>
+
+    </body>
+</html>
